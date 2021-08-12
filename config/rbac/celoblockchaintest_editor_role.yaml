@@ -1,0 +1,24 @@
+# permissions for end users to edit celoblockchaintests.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: celoblockchaintest-editor-role
+rules:
+- apiGroups:
+  - test.jcortejoso.com
+  resources:
+  - celoblockchaintests
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - test.jcortejoso.com
+  resources:
+  - celoblockchaintests/status
+  verbs:
+  - get

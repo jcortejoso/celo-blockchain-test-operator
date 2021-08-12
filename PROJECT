@@ -1,0 +1,19 @@
+domain: jcortejoso.com
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: celo-blockchain-tests-operator
+repo: github.com/jcortejoso/celo-blockchain-tests-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: jcortejoso.com
+  group: test
+  kind: CeloBlockchainTest
+  path: github.com/jcortejoso/celo-blockchain-tests-operator/api/v1alpha1
+  version: v1alpha1
+version: "3"
